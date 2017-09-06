@@ -17,7 +17,7 @@ Echo changing directory...
 alias proj="cd suricata-4.0.0" 
  
 Echo Building Suricata 
-./configure --enable-nfqueue --prefix=/usr --sysconfdir=/etc --localstatedir=/var && make && make-install 
+./configure --enable-nfqueue --prefix=/usr --sysconfdir=/etc --localstatedir=/var && make && make full-install 
  
 echo adding user and group 
 adduser suri 
