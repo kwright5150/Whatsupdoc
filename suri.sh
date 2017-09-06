@@ -19,10 +19,13 @@ alias proj="cd suricata-4.0.0"
 Echo Building Suricata 
 ./configure --enable-nfqueue --prefix=/usr --sysconfdir=/etc --localstatedir=/var && make && make-install 
  
-Echo adding user and group 
+echo adding user and group 
 adduser suri 
- 
-addgroup suri 
- 
-Echo Making sure suri owns the logging directory.. 
+
+## don't need to add group because suricata does this by default 
+
+echo Making sure suri owns the logging directory.. 
+
+mkdir /var/log/suricata
+
 chown -R suri:suri /var/log/suricata/ 
