@@ -10,14 +10,18 @@ apt-get -y install libpcre3 libpcre3-dbg libpcre3-dev build-essential autoconf a
 echo Downloading sourcecode.. 
 wget https://www.openinfosecfoundation.org/download/suricata-4.0.0.tar.gz 
  
-Echo Unpacking... 
+ccho Unpacking... 
 tar xvzf suricata-4.0.0.tar.gz 
  
-Echo changing directory... 
+echo changing directory... 
 alias proj="cd suricata-4.0.0" 
  
-Echo Building Suricata 
-./configure --enable-nfqueue --prefix=/usr --sysconfdir=/etc --localstatedir=/var && make && make full-install 
+ccho Building Suricata 
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var 
+
+make 
+
+make full-install 
  
 echo adding user and group 
 adduser suri 
